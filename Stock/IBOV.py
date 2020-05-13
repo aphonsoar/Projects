@@ -63,12 +63,12 @@ for i in range(0,PAPEL.shape[0]-Media_movel_1):
 
 # Média móvel 2:
 for i in range(0,PAPEL.shape[0]-Media_movel_2):
-    PAPEL.loc[PAPEL.index[i+Media_movel_2],'MM1 '+ str(Media_movel_2)] = np.round(((PAPEL.iloc[i,1] + PAPEL.iloc[i+1,1] + PAPEL.iloc[i+Media_movel_2,1])/3),2)
+    PAPEL.loc[PAPEL.index[i+Media_movel_2],'MM2 '+ str(Media_movel_2)] = np.round(((PAPEL.iloc[i,1] + PAPEL.iloc[i+1,1] + PAPEL.iloc[i+Media_movel_2,1])/3),2)
 
 x = PAPEL["Data"]
 y = PAPEL["Cotacao_fechamento"]
 MM1 = PAPEL["MM1 "+ str(Media_movel_1)]
-MM2 = PAPEL["MM1 "+ str(Media_movel_1)]
+MM2 = PAPEL["MM2 "+ str(Media_movel_2)]
 
 # Original funcionando:
 # fig, ax = plt.subplots()
