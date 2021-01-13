@@ -7,7 +7,7 @@
 
 def sample_size_calculator(n_population, confidence, error_margin, proportion):
 
-    # Defining z through proportion expected of population
+    # Defining z through confidence interval
     if confidence == 0.9:
         z = 1.645
     elif confidence == 0.95:
