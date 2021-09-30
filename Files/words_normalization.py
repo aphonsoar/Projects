@@ -18,3 +18,6 @@ def words_normalization(list_of_strings):
 
 # Run the function on the list of words:
 list_normalized = words_normalization(list)
+
+#print(['é DHUEHD ÉÉÉ ´I ´U )(', 'TESTE123', 'ççÇÇ       ..., , . \ 88 jioasjdioajs TESTE123'])
+#print(list_normalized)
