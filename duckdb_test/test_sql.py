@@ -9,7 +9,7 @@ mydf = pd.DataFrame({'a':[1,2,3]})
 duckdb.query("select sum(a) from mydf").to_df()
 
 #%%
-dir = 'C:\\Aphonso_C\\duckdb_test\\'
+dir = 'C:\\Aphonso_C\\Git\\Projects\\duckdb_test\\'
 
 branch = pd.read_csv(dir+'branch.csv', keep_default_na=False)
 city = pd.read_csv(dir+'city.csv', keep_default_na=False)
@@ -53,10 +53,14 @@ city1 as
 
 ,branch1 as 
 ( 
-    select * 
+    select 
+         b.*
+        ,c.city_name
+        ,c.country 
     from branch b
         left join city1 c
-            on b.id_city = b.id_city
+            on b.id_city = c.id_city
+    where c.id_city is not null
 )
 
 select * from branch1
