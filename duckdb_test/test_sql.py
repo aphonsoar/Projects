@@ -1,5 +1,6 @@
 # https://www.linkedin.com/posts/khuyen-tran-1401_python-duckdb-pandsa-activity-7138206922733731840-qRSf?utm_source=share&utm_medium=member_desktop
 # https://khuyentran1401.github.io/Efficient_Python_tricks_and_tools_for_data_scientists/Chapter5/SQL.html?highlight=duckdb#efficient-sql-operations-with-duckdb-on-pandas-dataframes
+# DuckDB, Polars and Pandas performance comparison: https://github.com/prrao87/duckdb-study
 import pandas as pd
 import duckdb
 
