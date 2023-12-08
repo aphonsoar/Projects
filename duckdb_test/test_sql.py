@@ -55,8 +55,9 @@ city1 as
 ( 
     select 
          b.*
+        ,c.country        
         ,c.city_name
-        ,c.country 
+        ,count(city_name) over (partition by city_name order by 1 rows between unbounded preceding and unbounded following) as count_city
     from branch b
         left join city1 c
             on b.id_city = c.id_city
